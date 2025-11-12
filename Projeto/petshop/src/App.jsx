@@ -4,17 +4,59 @@
 //import './App.css'
 import Home from './pages/Home'
 import Sobre from './pages/Sobre'
+import Pagina404 from './pages/404.jsx'
+import Cabecalho from './components/cabecalho.jsx'
+import Post from './pages/Post.jsx'
+
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import './assets/css/base/base.css'
 
-function App() {
-  //const [count, setCount] = useState(0)
 
-  return (
+
+function App() {
+  return(
+    
+    <Router>
+      <Cabecalho />
+      <Routes>
+        {/* Use element={componente /} para renderizar */}
+        <Route path='/' element={<Home />}/>
+        <Route path='/sobre' element={<Sobre />}/>
+        <Route path='/posts/:id' element={<Post />}/>
+        <Route path='*' element={<Pagina404 />}/>
+      </Routes>
+
+    </Router>
+
+  )
+}export default App
+
+
+
+
+
+// function App() {
+//   //const [count, setCount] = useState(0)
+
+
+//     const location = window.location.pathname
+//     if(location === '/Sobre'){
+//       return <Sobre />
+//     } else {
+//       return <Home />
+//     }
+//   }
+//     export default App
+
+
+
+
+  /*return (
     <>
       <Home />
       <Sobre />
-    </>
+    </>*/
     // <>
     //   <div>
     //     <h1>Hello Word!!!</h1>
@@ -38,7 +80,7 @@ function App() {
     //     Click on the Vite and React logos to learn more
     //   </p>
     // </>
-  )
-}
+  
 
-export default App
+
+//
