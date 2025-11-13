@@ -60,7 +60,7 @@ const ListaCatAdmin = () => {
                                 >
                                     {/* Botão EDITAR */}
                                     <Link
-                                        to="/admin"
+                                        to={`/admin/${categoria.id}`}
                                         style={{ textDecoration: 'none' }}
                                     >
                                         <Button
