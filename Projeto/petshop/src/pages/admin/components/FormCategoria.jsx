@@ -23,6 +23,7 @@ const FormCategoria = () => {
 
         if(id){
             // modo edição
+            
         api.put(`/categorias/${id}`, {
             id: nomeCategoria,
             nome: nomeCategoria,
