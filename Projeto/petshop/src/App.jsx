@@ -7,6 +7,11 @@ import Sobre from './pages/Sobre'
 import Pagina404 from './pages/404.jsx'
 import Cabecalho from './components/cabecalho.jsx'
 import Post from './pages/Post.jsx'
+import Categoria from './pages/Categoria.jsx'
+import SubCategoria from './pages/SubCategorias.jsx'
+import CategoriaPosts from './pages/CategoriaPost.jsx'
+
+
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
@@ -19,14 +24,33 @@ function App() {
     
     <Router>
       <Cabecalho />
-      <Routes>
-        {/* Use element={componente /} para renderizar */}
-        <Route path='/' element={<Home />}/>
-        <Route path='/sobre' element={<Sobre />}/>
-        <Route path='/posts/:id' element={<Post />}/>
-        <Route path='*' element={<Pagina404 />}/>
-      </Routes>
+       <Routes>
+        {/* Use element={Componente /} para renderizar */}
+        <Route path='/' element={<Home />} />
+        <Route path='/posts/:id' element={<Post />} />
 
+        {/* 
+          Esta é a rota pai. Ela renderiza o <Categoria />
+        */}
+        <Route path='/categoria/:id' element={<Categoria />}>
+            
+            {/* Esta é a rota "filho" de índice (index).
+              Ela é renderizada dentro do <Outlet> quando a URL
+              é exatamente /categoria/:id 
+            */}
+            <Route index element={<CategoriaPosts />} />
+            
+            {/* Esta é a rota "filho" da subcategoria.
+              Ela é renderizada dentro do <Outlet> quando a URL
+              é /categoria/:id/:subcategoria 
+            */}
+            <Route path=':subcategoria' element={<SubCategoria />} />
+        
+        </Route>
+
+        <Route path='/sobre' element={<Sobre />} />
+        <Route path='*' element={<Pagina404 />} />
+      </Routes>
     </Router>
 
   )
