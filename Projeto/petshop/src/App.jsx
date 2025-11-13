@@ -23,6 +23,15 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './assets/css/base/base.css'
 
 
+// Páginas Admin (Layout e Componentes)
+//import AdminLayout from './pages/admin/AdminLayout'; // (O layout que criamos)
+
+
+
+//import PostAdmin from './pages/admin/PostAdmin';
+//import FormPost from './pages/admin/components/FormPost';//
+
+
 
 
 function App() {

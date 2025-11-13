@@ -15,14 +15,6 @@
         "higiene",
         "saude"
       ]
-    },
-    {
-      "id": "tecnologia",
-      "nome": "tecnologia",
-      "subcategorias": [
-        "nova 2",
-        "nova 1"
-      ]
     }
   ],
   "posts": [
