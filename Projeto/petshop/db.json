@@ -5,13 +5,24 @@
       "nome": "comportamento",
       "subcategorias": [
         "treinamento",
-        "educacao"
+        "Educação"
       ]
     },
     {
       "id": "bem-estar",
       "nome": "bem-estar",
-      "subcategorias": []
+      "subcategorias": [
+        "higiene",
+        "saude"
+      ]
+    },
+    {
+      "id": "tecnologia",
+      "nome": "tecnologia",
+      "subcategorias": [
+        "nova 2",
+        "nova 1"
+      ]
     }
   ],
   "posts": [

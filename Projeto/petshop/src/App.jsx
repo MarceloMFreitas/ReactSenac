@@ -12,6 +12,8 @@ import SubCategoria from './pages/SubCategorias.jsx'
 import CategoriaPosts from './pages/CategoriaPost.jsx'
 import Admin from './pages/admin/Admin.jsx'
 import FormCategoria from './pages/admin/components/FormCategoria.jsx'
+import CatAdmin from './pages/admin/CatAdmin.jsx'
+import FormSubCategoria from './pages/admin/components/FormSubCategoria.jsx'
 
 
 
@@ -19,6 +21,7 @@ import FormCategoria from './pages/admin/components/FormCategoria.jsx'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import './assets/css/base/base.css'
+
 
 
 
@@ -32,6 +35,8 @@ function App() {
         <Route path='/admin' element={<Admin />} />
         <Route path='/admin/NovaCategoria' element={<FormCategoria />} />
         <Route path='/admin/:id' element={<FormCategoria />} />
+        <Route path='/admin/categoria/:id' element={<CatAdmin />} />
+        <Route path='/admin/sub/:id' element={<FormSubCategoria />} />
         <Route path='/' element={<Home />} />
         <Route path='/posts/:id' element={<Post />} />
 

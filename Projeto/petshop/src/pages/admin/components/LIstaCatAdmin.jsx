@@ -88,6 +88,24 @@ const ListaCatAdmin = () => {
                                             Excluir
                                         </Button>
                                     </Link>
+                                    </td>
+                                    <td>
+                                    {/* subcategoria */}
+                                    <Link
+                                        to={`/admin/categoria/${categoria.id}`}
+                                        style={{ textDecoration: 'none' }}
+                                    >
+                                        <Button
+                                            type="button"
+                                            variant="outlined"
+                                            color="primary"
+                                            // Cor MUI para Erro/Remoção
+                                            sx={{ margin: "0 0.25rem" }}
+                                            
+                                        >
+                                            SubCategoria
+                                        </Button>
+                                    </Link>
 
 
                                 </td>
