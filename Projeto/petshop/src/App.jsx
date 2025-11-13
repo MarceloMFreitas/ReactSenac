@@ -14,6 +14,8 @@ import Admin from './pages/admin/Admin.jsx'
 import FormCategoria from './pages/admin/components/FormCategoria.jsx'
 import CatAdmin from './pages/admin/CatAdmin.jsx'
 import FormSubCategoria from './pages/admin/components/FormSubCategoria.jsx'
+import AdminLayout from './pages/admin/AdminLayout.jsx'
+
 
 
 
@@ -23,13 +25,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './assets/css/base/base.css'
 
 
-// Páginas Admin (Layout e Componentes)
-//import AdminLayout from './pages/admin/AdminLayout'; // (O layout que criamos)
 
-
-
-//import PostAdmin from './pages/admin/PostAdmin';
-//import FormPost from './pages/admin/components/FormPost';//
 
 
 
@@ -41,13 +37,16 @@ function App() {
       <Cabecalho />
        <Routes>
         {/* Use element={Componente /} para renderizar */}
-        <Route path='/admin' element={<Admin />} />
+    
         <Route path='/admin/NovaCategoria' element={<FormCategoria />} />
         <Route path='/admin/:id' element={<FormCategoria />} />
         <Route path='/admin/categoria/:id' element={<CatAdmin />} />
         <Route path='/admin/sub/:id' element={<FormSubCategoria />} />
         <Route path='/' element={<Home />} />
         <Route path='/posts/:id' element={<Post />} />
+        <Route path='/admin/' element={<AdminLayout />}>
+          <Route index element = {<Admin />}/>
+        </Route>
 
         {/* 
           Esta é a rota pai. Ela renderiza o <Categoria />
